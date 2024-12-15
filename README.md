@@ -1,2 +1,2 @@
 # FluidFlowSolver
-Under active development
+CFD solver under active development
