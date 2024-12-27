@@ -1,0 +1,3 @@
+/home/szajnecki/Projects/FluidFlowSolver/build_legacy/CMakeFiles/FluidixLegacy.dir
+/home/szajnecki/Projects/FluidFlowSolver/build_legacy/CMakeFiles/edit_cache.dir
+/home/szajnecki/Projects/FluidFlowSolver/build_legacy/CMakeFiles/rebuild_cache.dir
