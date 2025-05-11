@@ -1,0 +1,3 @@
+/home/szajnecki/Projects/Fluidix/build/CMakeFiles/Fluidix.dir
+/home/szajnecki/Projects/Fluidix/build/CMakeFiles/edit_cache.dir
+/home/szajnecki/Projects/Fluidix/build/CMakeFiles/rebuild_cache.dir

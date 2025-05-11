@@ -1,0 +1,50 @@
+[
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/ConservedVariables.cpp.o -c /home/szajnecki/Projects/Fluidix/src/ConservedVariables.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/ConservedVariables.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/ConservedVariables.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/GasModel.cpp.o -c /home/szajnecki/Projects/Fluidix/src/GasModel.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/GasModel.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/GasModel.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/GnuplotWriter.cpp.o -c /home/szajnecki/Projects/Fluidix/src/GnuplotWriter.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/GnuplotWriter.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/GnuplotWriter.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/Grid1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/Grid1D.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/Grid1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/Grid1D.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/RusanovFlux.cpp.o -c /home/szajnecki/Projects/Fluidix/src/RusanovFlux.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/RusanovFlux.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/RusanovFlux.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/Solver1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/Solver1D.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/Solver1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/Solver1D.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/VTKWriter1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/VTKWriter1D.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/VTKWriter1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/VTKWriter1D.cpp.o"
+},
+{
+  "directory": "/home/szajnecki/Projects/Fluidix/build",
+  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/main.cpp.o -c /home/szajnecki/Projects/Fluidix/src/main.cpp",
+  "file": "/home/szajnecki/Projects/Fluidix/src/main.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/main.cpp.o"
+}
+]
