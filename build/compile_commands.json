@@ -1,50 +1,50 @@
 [
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/ConservedVariables.cpp.o -c /home/szajnecki/Projects/Fluidix/src/ConservedVariables.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/ConservedVariables.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/ConservedVariables.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\ConservedVariables.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\ConservedVariables.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/ConservedVariables.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/ConservedVariables.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/GasModel.cpp.o -c /home/szajnecki/Projects/Fluidix/src/GasModel.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/GasModel.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/GasModel.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\GasModel.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\GasModel.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/GasModel.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/GasModel.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/GnuplotWriter.cpp.o -c /home/szajnecki/Projects/Fluidix/src/GnuplotWriter.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/GnuplotWriter.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/GnuplotWriter.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\GnuplotWriter.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\GnuplotWriter.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/GnuplotWriter.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/GnuplotWriter.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/Grid1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/Grid1D.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/Grid1D.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/Grid1D.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\Grid1D.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\Grid1D.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/Grid1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/Grid1D.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/RusanovFlux.cpp.o -c /home/szajnecki/Projects/Fluidix/src/RusanovFlux.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/RusanovFlux.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/RusanovFlux.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\RusanovFlux.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\RusanovFlux.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/RusanovFlux.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/RusanovFlux.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/Solver1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/Solver1D.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/Solver1D.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/Solver1D.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\Solver1D.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\Solver1D.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/Solver1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/Solver1D.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/VTKWriter1D.cpp.o -c /home/szajnecki/Projects/Fluidix/src/VTKWriter1D.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/VTKWriter1D.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/VTKWriter1D.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\VTKWriter1D.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\VTKWriter1D.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/VTKWriter1D.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/VTKWriter1D.cpp.obj"
 },
 {
-  "directory": "/home/szajnecki/Projects/Fluidix/build",
-  "command": "/usr/bin/c++  -I/home/szajnecki/Projects/Fluidix/include -std=gnu++17 -o CMakeFiles/Fluidix.dir/src/main.cpp.o -c /home/szajnecki/Projects/Fluidix/src/main.cpp",
-  "file": "/home/szajnecki/Projects/Fluidix/src/main.cpp",
-  "output": "CMakeFiles/Fluidix.dir/src/main.cpp.o"
+  "directory": "C:/Users/logan/Desktop/Projects/Fluidix/build",
+  "command": "C:\\Users\\logan\\dev\\winlibs-x86_64-posix-seh-gcc-14.2.0-llvm-19.1.7-mingw-w64ucrt-12.0.0-r3\\mingw64\\bin\\c++.exe  @CMakeFiles/Fluidix.dir/includes_CXX.rsp -std=gnu++17 -o CMakeFiles\\Fluidix.dir\\src\\main.cpp.obj -c C:\\Users\\logan\\Desktop\\Projects\\Fluidix\\src\\main.cpp",
+  "file": "C:/Users/logan/Desktop/Projects/Fluidix/src/main.cpp",
+  "output": "CMakeFiles/Fluidix.dir/src/main.cpp.obj"
 }
 ]
