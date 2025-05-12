@@ -14,10 +14,20 @@ void MUSCLReconstructor1D::reconstruct(const std::vector<ConservedVariables>& U,
         auto duR = U[i+1] - U[i];
 
         // Apply minmod limiter component-wise
+        // ConservedVariables slope(
+        //     minmod(duL.rho,   duR.rho),
+        //     minmod(duL.rho_u, duR.rho_u),
+        //     minmod(duL.E,     duR.E)
+        // );
+        // ConservedVariables slope(
+        //     mc(duL.rho,   duR.rho),
+        //     mc(duL.rho_u, duR.rho_u),
+        //     mc(duL.E,     duR.E)
+        // );
         ConservedVariables slope(
-            minmod(duL.rho,   duR.rho),
-            minmod(duL.rho_u, duR.rho_u),
-            minmod(duL.E,     duR.E)
+            vanLeer(duL.rho,   duR.rho),
+            vanLeer(duL.rho_u, duR.rho_u),
+            vanLeer(duL.E,     duR.E)
         );
 
         // Reconstruct left/right states at face between i and i+1

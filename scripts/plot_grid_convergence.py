@@ -70,10 +70,20 @@ plt.ylabel("L2 Error")
 plt.title("Grid Convergence Study")
 plt.legend()
 
-# Show slope for density
-if len(l2_rho_all) >= 2:
-    order = np.log(l2_rho_all[-2] / l2_rho_all[-1]) / np.log(grid_sizes[-2] / grid_sizes[-1])
-    plt.text(grid_sizes[-1], l2_rho_all[-1] * 1.5, f"ρ slope ≈ {order:.2f}", fontsize=9)
+# # Show slope for density
+# if len(l2_rho_all) >= 2:
+#     order = np.log(l2_rho_all[-2] / l2_rho_all[-1]) / np.log(grid_sizes[-2] / grid_sizes[-1])
+#     plt.text(grid_sizes[-1], l2_rho_all[-1] * 1.5, f"ρ slope ≈ {order:.2f}", fontsize=9)
+
+# Show convergence slope estimates (last two points)
+def slope_label(ax, x, y, label):
+    if len(x) >= 2:
+        order = np.log(y[-2] / y[-1]) / np.log(x[-2] / x[-1])
+        ax.text(x[-1], y[-1]*1.5, f"{label} slope ≈ {order:.2f}", fontsize=9)
+
+slope_label(plt.gca(), grid_sizes, l2_rho_all, "rho")
+slope_label(plt.gca(), grid_sizes, l2_u_all,   "u")
+slope_label(plt.gca(), grid_sizes, l2_p_all,   "p")
 
 plt.tight_layout()
 plt.savefig("../validation/convergence_plot.png", dpi=150)

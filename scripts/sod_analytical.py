@@ -2,6 +2,8 @@
 import numpy as np
 from scipy.optimize import newton
 import matplotlib.pyplot as plt
+import sys
+import os
 
 # Function to find the roots of!
 def f(P, pL, pR, cL, cR, gg):
@@ -33,7 +35,7 @@ def SodShockAnalytic(rL, uL, pL, rR, uR, pR, xs, x0, T, gg):
     v_analytic[0,x_shock-1:] = rR
     v_analytic[1,x_shock-1:] = uR
     v_analytic[2,x_shock-1:] = pR
-    
+
     # region 2
     alpha = (gg+1)/(gg-1)
     c_contact = uL + 2*cL/(gg-1)*( 1-(P*pR/pL)**((gg-1.)/2/gg) )
@@ -41,7 +43,7 @@ def SodShockAnalytic(rL, uL, pL, rR, uR, pR, xs, x0, T, gg):
     v_analytic[0,x_contact:x_shock-1] = (1 + alpha*P)/(alpha+P)*rR
     v_analytic[1,x_contact:x_shock-1] = c_contact
     v_analytic[2,x_contact:x_shock-1] = P*pR
-    
+
     # region 3
     r3 = rL*(P*pR/pL)**(1/gg)
     p3 = P*pR
@@ -50,7 +52,7 @@ def SodShockAnalytic(rL, uL, pL, rR, uR, pR, xs, x0, T, gg):
     v_analytic[0,x_fanright:x_contact] = r3
     v_analytic[1,x_fanright:x_contact] = c_contact
     v_analytic[2,x_fanright:x_contact] = P*pR
-    
+
     # region 4
     c_fanleft = -cL
     x_fanleft = x0 + int(np.ceil(c_fanleft*T/dx))
@@ -71,8 +73,13 @@ gg=1.4  # gamma = C_v / C_p = 7/5 for ideal gas
 rL, uL, pL =  1.0,  0.0, 1; 
 rR, uR, pR = 0.125, 0.0, .1
 
+# Handle CLI argument for Nx
+if len(sys.argv) > 1:
+    Nx = int(sys.argv[1])
+else:
+    Nx = 1000  # default
+
 # Set Disretization
-Nx = 1000
 X = 1.
 dx = X/(Nx-1)
 xs = np.linspace(0,X,Nx)
@@ -81,22 +88,24 @@ T = 0.2
 
 analytic = SodShockAnalytic(rL, uL, pL, rR, uR, pR, xs, x0, T, gg)
 
-fig, axs = plt.subplots(1,3,figsize=(8,2), layout='constrained')
-axs[0].set_title("Density")
-axs[0].plot(xs,analytic[0].T)
-axs[1].set_title("Velocity")
-axs[1].plot(xs,analytic[1].T)
-axs[1].set_yticks([0.,.2,.4,.6,.8,1.],['','','','','',''])
-axs[2].set_title("Pressure")
-axs[2].plot(xs,analytic[2].T)
-axs[2].set_yticks([0.,.2,.4,.6,.8,1.],['','','','','',''])
-for i in range(3):
-    axs[i].set_xlim([0.,1.])
-    axs[i].set_ylim([-.05,1.05])
-plt.show()
+# Show plot (optional)
+# fig, axs = plt.subplots(1,3,figsize=(8,2), layout='constrained')
+# axs[0].set_title("Density")
+# axs[0].plot(xs,analytic[0].T)
+# axs[1].set_title("Velocity")
+# axs[1].plot(xs,analytic[1].T)
+# axs[1].set_yticks([0.,.2,.4,.6,.8,1.],['','','','','',''])
+# axs[2].set_title("Pressure")
+# axs[2].plot(xs,analytic[2].T)
+# axs[2].set_yticks([0.,.2,.4,.6,.8,1.],['','','','','',''])
+# for i in range(3):
+#     axs[i].set_xlim([0.,1.])
+#     axs[i].set_ylim([-.05,1.05])
+# plt.show()
 
 # Save output as: x  rho  u  p
+os.makedirs("../validation", exist_ok=True)
 np.savetxt("../validation/sod_exact.dat",
            np.column_stack((xs, analytic[0], analytic[1], analytic[2])),
            header="x rho u p", comments='')
-print("Saved exact solution to sod_exact.dat")
+print(f"Saved exact solution with Nx={Nx} to ../validation/sod_exact.dat")
