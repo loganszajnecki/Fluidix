@@ -4,7 +4,7 @@ import os
 
 # === Paths ===
 exact_path = "../validation/sod_exact.dat"
-numerical_path = "../build/output.dat"
+numerical_path = "../validation/outputs/output_N3200.dat"
 output_dir = "../validation"
 os.makedirs(output_dir, exist_ok=True)
 
