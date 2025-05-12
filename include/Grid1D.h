@@ -11,6 +11,7 @@ public:
 
     ConservedVariables& operator[](size_t i) { return cells[i]; }
     const ConservedVariables& operator[](size_t i) const { return cells[i]; }
+    const std::vector<ConservedVariables>& data() const { return cells; }
 
 private:
     std::vector<ConservedVariables> cells;

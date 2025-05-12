@@ -5,7 +5,7 @@
 #include <iostream>
 
 int main() {
-    const size_t N = 100;
+    const size_t N = 1000;
     Grid1D grid(N, 0.0, 1.0);
     GasModel gas(1.4);
 
