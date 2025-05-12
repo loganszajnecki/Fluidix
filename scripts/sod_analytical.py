@@ -72,7 +72,7 @@ rL, uL, pL =  1.0,  0.0, 1;
 rR, uR, pR = 0.125, 0.0, .1
 
 # Set Disretization
-Nx = 100
+Nx = 1000
 X = 1.
 dx = X/(Nx-1)
 xs = np.linspace(0,X,Nx)
@@ -96,7 +96,7 @@ for i in range(3):
 plt.show()
 
 # Save output as: x  rho  u  p
-np.savetxt("validation/sod_exact.dat",
+np.savetxt("../validation/sod_exact.dat",
            np.column_stack((xs, analytic[0], analytic[1], analytic[2])),
            header="x rho u p", comments='')
 print("Saved exact solution to sod_exact.dat")

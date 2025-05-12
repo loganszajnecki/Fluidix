@@ -2,6 +2,7 @@
 #include "Grid1D.h"
 #include "GasModel.h"
 #include "RusanovFlux.h"
+#include "HLLCFlux.h"
 
 class Solver1D {
 public:
@@ -11,5 +12,6 @@ public:
 
 private:
     Grid1D& grid_;
-    RusanovFlux flux_;
+    // RusanovFlux flux_;
+    HLLCFlux flux_;
 };

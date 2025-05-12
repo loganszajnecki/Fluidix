@@ -1,4 +1,5 @@
 #include "Solver1D.h"
+#include "MUSCLReconstructor1D.h"
 
 Solver1D::Solver1D(Grid1D& grid, const GasModel& gas)
     : grid_(grid), flux_(gas) {}
@@ -10,8 +11,16 @@ void Solver1D::advance(double dt) {
     std::vector<ConservedVariables> fluxes(N + 1); // N+1 interfaces
 
     // Compute numerical fluxes at interfaces, Rusanov Flux 
-    for (size_t i = 0; i < N - 1; ++i) {
-        fluxes[i + 1] = flux_.compute(grid_[i], grid_[i + 1]);
+    // for (size_t i = 0; i < N - 1; ++i) {
+    //     fluxes[i + 1] = flux_.compute(grid_[i], grid_[i + 1]);
+    // }
+
+    MUSCLReconstructor1D reconstructor;
+    std::vector<ConservedVariables> UL, UR;
+    reconstructor.reconstruct(grid_.data(), UL, UR);
+
+    for (size_t i = 0; i < UL.size(); ++i) {
+        fluxes[i + 1] = flux_.compute(UL[i], UR[i]);
     }
 
     // Update conserved variables using FV update

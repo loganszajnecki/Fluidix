@@ -3,9 +3,18 @@
 #include "GnuplotWriter1D.h"
 #include <cmath>
 #include <iostream>
+#include <string>
+#include <cstdlib>
 
-int main() {
-    const size_t N = 1000;
+int main(int argc, char** argv) {
+    if (argc < 3) {
+        std::cerr << "Usage: ./Fluidix <num_cells> <output_file>\n";
+        return 1;
+    }
+
+    int N = std::atoi(argv[1]);
+    std::string output_path = argv[2];
+
     Grid1D grid(N, 0.0, 1.0);
     GasModel gas(1.4);
 
@@ -50,7 +59,7 @@ int main() {
     // VTKWriter1D writer(grid, gas);
     // writer.writePolyData("output.vtk");
     GnuplotWriter1D writerText(grid, gas);
-    writerText.writeDataFile("output.dat");
+    writerText.writeDataFile(output_path);
 
     return 0;
 }
