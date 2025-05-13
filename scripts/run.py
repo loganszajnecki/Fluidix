@@ -5,7 +5,8 @@ import numpy as np
 executable = "../build/Fluidix.exe"  # or "./Fluidix" on Linux
 output_dir = "../validation/outputs/"
 analytical_script = "sod_analytical.py"
-grid_sizes = [int(n) for n in np.linspace(50, 3200, 5)]
+#grid_sizes = [int(n) for n in np.linspace(10, 500, 5)]
+grid_sizes = [25, 50, 100, 200, 400, 800, 1600, 3200, 6400]
 
 # === Ensure output directory exists ===
 os.makedirs(output_dir, exist_ok=True)
@@ -15,9 +16,11 @@ for N in grid_sizes:
     print(f"[+] Grid size N = {N}")
 
     # 1. Generate exact solution at matching resolution
-    print(f"    [•] Generating sod_exact.dat with Nx = {N}")
-    result = subprocess.run(["python", analytical_script, str(N)],
+    exact_path = os.path.join(output_dir, f"sod_exact_N{N}.dat")
+    print(f"    [•] Generating {exact_path} with Nx = {N}")
+    result = subprocess.run(["py", analytical_script, str(N), exact_path],
                             stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
     if result.returncode != 0:
         print("    [!] Error in sod_analytical.py:")
         print(result.stderr)

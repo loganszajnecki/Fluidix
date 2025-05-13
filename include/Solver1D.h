@@ -12,6 +12,7 @@ public:
 
 private:
     Grid1D& grid_;
+    const GasModel& gas_; 
     // RusanovFlux flux_;
     HLLCFlux flux_;
 };

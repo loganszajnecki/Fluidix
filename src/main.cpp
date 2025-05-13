@@ -30,7 +30,7 @@ int main(int argc, char** argv) {
 
     Solver1D solver(grid, gas);
 
-    const double CFL = 0.3;
+    const double CFL = 0.5;
     const double final_time = 0.2;
     double time = 0.0;
 

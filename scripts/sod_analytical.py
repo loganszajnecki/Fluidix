@@ -73,16 +73,18 @@ gg=1.4  # gamma = C_v / C_p = 7/5 for ideal gas
 rL, uL, pL =  1.0,  0.0, 1; 
 rR, uR, pR = 0.125, 0.0, .1
 
-# Handle CLI argument for Nx
-if len(sys.argv) > 1:
-    Nx = int(sys.argv[1])
-else:
-    Nx = 1000  # default
+if len(sys.argv) < 2:
+    print("Usage: python sod_analytical.py <Nx> [output_path]")
+    sys.exit(1)
+
+Nx = int(sys.argv[1])
+output_path = sys.argv[2] if len(sys.argv) > 2 else "../validation/sod_exact.dat"
+
 
 # Set Disretization
 X = 1.
-dx = X/(Nx-1)
-xs = np.linspace(0,X,Nx)
+dx = X/Nx
+xs = np.linspace(0,X-dx,Nx)
 x0 = Nx//2
 T = 0.2
 
@@ -105,7 +107,8 @@ analytic = SodShockAnalytic(rL, uL, pL, rR, uR, pR, xs, x0, T, gg)
 
 # Save output as: x  rho  u  p
 os.makedirs("../validation", exist_ok=True)
-np.savetxt("../validation/sod_exact.dat",
+np.savetxt(output_path,
            np.column_stack((xs, analytic[0], analytic[1], analytic[2])),
            header="x rho u p", comments='')
-print(f"Saved exact solution with Nx={Nx} to ../validation/sod_exact.dat")
+print(f"Saved exact solution with Nx={Nx} to {output_path}")
+

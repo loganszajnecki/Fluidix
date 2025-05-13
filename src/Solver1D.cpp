@@ -1,10 +1,13 @@
 #include "Solver1D.h"
 #include "MUSCLReconstructor1D.h"
+#include <iostream>
 
 Solver1D::Solver1D(Grid1D& grid, const GasModel& gas)
-    : grid_(grid), flux_(gas) {}
+    : grid_(grid), gas_(gas), flux_(gas) {}
+
 
 void Solver1D::advance(double dt) {
+    
     size_t N = grid_.num_cells();
     double dx = grid_.dx();
 
@@ -34,4 +37,15 @@ void Solver1D::advance(double dt) {
     for (size_t i = 1; i < N - 1; ++i) {
         grid_[i] = new_state[i];
     }
+    // Runtime check: ensure physical states
+    for (size_t i = 1; i < N - 1; ++i) {
+        auto prim = gas_.conservedToPrimitive(grid_[i]);
+
+        if (prim.rho <= 0.0 || prim.p <= 0.0 || std::isnan(prim.rho) || std::isnan(prim.p)) {
+            std::cerr << "Non-physical state at cell " << i << ": "
+                    << "rho = " << prim.rho << ", p = " << prim.p << "\n";
+            std::exit(EXIT_FAILURE);
+        }
+    }
+
 }
