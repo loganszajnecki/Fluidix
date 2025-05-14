@@ -8,6 +8,7 @@ public:
 
     size_t num_cells() const { return cells.size(); }
     double dx() const { return dx_; }
+    void set(const std::vector<ConservedVariables>& new_cells);
 
     ConservedVariables& operator[](size_t i) { return cells[i]; }
     const ConservedVariables& operator[](size_t i) const { return cells[i]; }

@@ -1,6 +1,7 @@
 #include "Solver1D.h"
 #include "VTKWriter1D.h"
 #include "GnuplotWriter1D.h"
+#include "RK3.h"
 #include <cmath>
 #include <iostream>
 #include <string>
@@ -29,6 +30,7 @@ int main(int argc, char** argv) {
     }
 
     Solver1D solver(grid, gas);
+    RK3 integrator(solver);
 
     const double CFL = 0.5;
     const double final_time = 0.2;
@@ -46,7 +48,8 @@ int main(int argc, char** argv) {
         double dt = CFL * grid.dx() / max_speed;
         if (time + dt > final_time) dt = final_time - time;
 
-        solver.advance(dt);
+        //solver.advance(dt);
+        integrator.advance(grid, dt);
         time += dt;
     }
 

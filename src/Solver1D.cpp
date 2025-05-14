@@ -47,5 +47,27 @@ void Solver1D::advance(double dt) {
             std::exit(EXIT_FAILURE);
         }
     }
-
 }
+
+void Solver1D::computeRHS(const Grid1D& grid, std::vector<ConservedVariables>& rhs) {
+    size_t N = grid.num_cells();
+    double dx = grid.dx();
+
+    std::vector<ConservedVariables> fluxes(N + 1);
+    MUSCLReconstructor1D reconstructor;
+    std::vector<ConservedVariables> UL, UR;
+    reconstructor.reconstruct(grid.data(), UL, UR);
+
+    for (size_t i = 0; i < UL.size(); ++i) {
+        fluxes[i + 1] = flux_.compute(UL[i], UR[i]);
+    }
+
+    rhs.resize(N);
+    for (size_t i = 1; i < N - 1; ++i) {
+        rhs[i] = -(fluxes[i + 1] - fluxes[i]) / dx;
+    }
+
+    rhs[0] = ConservedVariables();         // Optional: zero boundary
+    rhs[N - 1] = ConservedVariables();
+}
+

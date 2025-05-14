@@ -6,7 +6,7 @@ executable = "../build/Fluidix.exe"  # or "./Fluidix" on Linux
 output_dir = "../validation/outputs/"
 analytical_script = "sod_analytical.py"
 #grid_sizes = [int(n) for n in np.linspace(10, 500, 5)]
-grid_sizes = [25, 50, 100, 200, 400, 800, 1600, 3200, 6400]
+grid_sizes = [25, 50, 100, 200, 400, 800, 1600, 3200]
 
 # === Ensure output directory exists ===
 os.makedirs(output_dir, exist_ok=True)

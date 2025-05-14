@@ -10,6 +10,9 @@ public:
 
     void advance(double dt);
 
+    void computeRHS(const Grid1D& grid, std::vector<ConservedVariables>& rhs);
+
+
 private:
     Grid1D& grid_;
     const GasModel& gas_; 
